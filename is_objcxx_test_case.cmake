@@ -97,6 +97,7 @@ function(is_objcxx_test_case BUILD_HEADERS BUILD_SOURCES STORYBOARD_XIB STORYBOA
     target_compile_features(${BUILD_TARGET} PRIVATE 
         cxx_std_20 # C++20
     )
+    set_property(TARGET ${BUILD_TARGET} PROPERTY OBJCXX_STANDARD 20) # Objective-C++ 20
 
     # Options
     target_compile_options(${BUILD_TARGET} PRIVATE

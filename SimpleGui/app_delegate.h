@@ -1,7 +1,7 @@
 /**
- * @file mixed.hpp
+ * @file app_delegate.h
  * @author Shinichi Inoue (inoue.shinichi.1800@gmail.com)
- * @brief Objective-Cに組み込むC++ファイルヘッダー
+ * @brief AppDelegate
  * @version 0.1
  * @date 2023-08-22
  * 
@@ -9,5 +9,9 @@
  * 
  */
 #pragma once
+#import <Foundation/Foundation.h>
 
-void mixed_test_cpp();
+@interface AppDelegate : NSObject<NSApplicationDelegate> {
+
+}
+@end
