@@ -37,22 +37,22 @@ function(is_objcxx_test_case BUILD_HEADERS BUILD_SOURCES STORYBOARD_XIB STORYBOA
     target_include_directories(${BUILD_TARGET} PRIVATE ${CMAKE_SOURCE_DIR}) # Top level layer
 
     # Apple frameworks
-    # find_library(FOUNDATION Foundation)
-    # find_library(COCOA Cocoa)
-    # find_library(APPKIT Appkit)
-    # find_library(COREDATA CoreData)
-    # target_link_libraries(${BUILD_TARGET}
-    #     ${FOUNDATION}
-    #     ${COCOA}
-    #     ${APPKIT}
-    #     ${COREDATA}
-    # )
+    find_library(FOUNDATION Foundation)
+    find_library(COCOA Cocoa)
+    find_library(APPKIT Appkit)
+    find_library(COREDATA CoreData)
     target_link_libraries(${BUILD_TARGET}
-        "-framework Foundation"
-        "-framework Cocoa"
-        "-framework AppKit"
-        "-framework CoreData"
+        ${FOUNDATION}
+        ${COCOA}
+        ${APPKIT}
+        ${COREDATA}
     )
+    # target_link_libraries(${BUILD_TARGET}
+    #     "-framework Foundation"
+    #     "-framework Cocoa"
+    #     "-framework AppKit"
+    #     "-framework CoreData"
+    # )
 
     # Apple PLIST
     message(STATUS "APPLE_BUNDLE_PLIST: ${APPLE_BUNDLE_PLIST}")

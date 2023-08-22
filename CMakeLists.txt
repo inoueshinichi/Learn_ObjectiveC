@@ -102,4 +102,5 @@ enable_language(OBJCXX)
 # Subdirectory
 ###############################################################################
 add_subdirectory(HelloWorld)
+add_subdirectory(WrapCpp)
 # add_subdirectory(SimpleGui)

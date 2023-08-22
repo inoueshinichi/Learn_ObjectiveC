@@ -1,4 +1,4 @@
-#include "mixed_cpp.h"
+#include "mixed_cpp.hpp"
 #include <iostream>
 
 // void mixed_test_cpp() {

@@ -11,8 +11,9 @@ int main() {
         NSLog(@"Hello world!");  
 
         // mixed_test_cpp();
-        ObjCppMix *obj = [ObjCppMix new];
+        ObjCppMix *obj = [[ObjCppMix alloc] init];
         [obj wrap_mixed_test]; 
     }
+
     return 0;
 }
