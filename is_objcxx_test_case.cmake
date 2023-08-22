@@ -56,7 +56,7 @@ function(is_objcxx_test_case BUILD_HEADERS BUILD_SOURCES STORYBOARD_XIB STORYBOA
 
     # Apple PLIST
     message(STATUS "APPLE_BUNDLE_PLIST: ${APPLE_BUNDLE_PLIST}")
-    if(${APPLE_BUNDLE_PLIST} MATCHES "^.*/.+\.plist$")
+    if(${APPLE_BUNDLE_PLIST} MATCHES "^.*\.plist$")
         set_target_properties(${BUILD_TARGET} PROPERTIES
             MACOSX_BUNDLE_INFO_PLIST ${APPLE_BUNDLE_PLIST})
     else()
